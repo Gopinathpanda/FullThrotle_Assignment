@@ -15,7 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from backendApp import views
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('backendApp/', include('backendApp.urls'))
+    path('users/', views.UserListView.as_view()),
+    path('users/<slug:pk>', views.UserDetailView.as_view()),
+    path('activity/', views.ActivityListView.as_view()),
+    path('activity/<int:pk>', views.ActivityDetailView.as_view()),
+
 ]
