@@ -7,7 +7,6 @@ class User(models.Model):
     id = models.CharField(primary_key=True, max_length=10)
     real_name = models.CharField(max_length=30)
     tz = models.CharField(max_length=30, choices=TIMEZONE)
-    # members = models.ForeignKey(Members, related_name='users', on_delete=models.CASCADE)
 
     def __str__(self):
         return self.real_name
