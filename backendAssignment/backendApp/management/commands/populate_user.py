@@ -44,6 +44,7 @@ def generate_tz():
 
 
 class Command(BaseCommand):
+    help = 'Creation of User and ActivityPeriods'
     def add_arguments(self, parser):
         parser.add_argument('file_name', type=str, help='The Txt file contains user names')
 
